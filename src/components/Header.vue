@@ -5,7 +5,7 @@
                 <img src="https://img.icons8.com/ios-glyphs/30/000000/menu--v1.png" alt="">
                 <div class="dropdown-menu hb">
                     <router-link class="dropdown-item" to="/">Home</router-link>
-                    <router-link class="dropdown-item" to="/">Produtos</router-link>
+                    <router-link class="dropdown-item" to="/produtos">Produtos</router-link>
                     <router-link class="dropdown-item" to="/">Contatos</router-link>
                 </div>
             </div>
@@ -18,7 +18,7 @@
             <!-- Header Navigation -->
             <span class="navbar-item bc d-none d-xl-block d-lg-block py-0">
                 <router-link class="pl-5" to="/">Home</router-link>
-                <router-link class="pl-5" to="/">Produtos</router-link>
+                <router-link class="pl-5" to="/produtos">Produtos</router-link>
                 <router-link class="pl-5" to="/">Contatos</router-link>
             </span>
 
