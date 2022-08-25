@@ -36,7 +36,7 @@
                     <h5 style="cursor: pointer" data-toggle="modal" data-target="#usuarioModal">Entrar</h5>
                 </div>
             <div class="bag">
-                <img src="@/assets/cart.svg" alt="" class="pb-1">
+                <img src="@/assets/cart.svg" alt="" class="pb-1" @click="abrirCarrinho">
                 <span class="mb-3" v-if="this.contagemItensSacola > 0">{{ contagemItensSacola }}</span>
             </div>
         </nav>
@@ -74,15 +74,27 @@
                 </div>
             </div>
         </div>
+
+        <Carrinho ref="carrinhoMover"/>
     </div>
 </template>
 <script>
+import Carrinho from '@/components/Carrinho.vue'
+
 export default {
     name: 'HeaderPagina',
     computed: {
         contagemItensSacola() {
 
             return this.$store.getters.itensNumero
+        }
+    },
+    components: {
+        Carrinho
+    },
+    methods: {
+        abrirCarrinho() {
+            this.$refs.carrinhoMover.carrinhoON()
         }
     }
 }

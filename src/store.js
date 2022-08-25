@@ -139,6 +139,16 @@ export default new Vuex.Store({
 
             return state.carrinhoItens.length
         },
+        precoTotal(state) {
+
+            if (state.carrinhoItens.length != 0) {
+                
+                return state.carrinhoItens.reduce((a, b) => {
+
+                    return (b.preco == null) ? a : a + b.preco
+                }, 0)
+            }
+        },
         infoComprimento(state) {
 
             if (state.infoPagina.length > 0) {
@@ -154,6 +164,12 @@ export default new Vuex.Store({
         noCarrinho(state, n) {
 
             return state.carrinhoItens.push(n)
+        },
+        saidaCarrinho(state, n) {
+
+            let index = state.carrinhoItens.findIndex(x => x.id === n)
+
+            return state.carrinhoItens.splice(index, 1)
         },
         addNaInfo(state, n) {
 
