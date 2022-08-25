@@ -29,23 +29,23 @@ export default new Vuex.Store({
                 img: require('@/assets/3.jpg'),
                 titulo: 'fotal 34',
                 preco: 362,
-                cor: 'yellow',
-                tipo: 'chair'
+                cor: 'amarelo',
+                tipo: 'cadeira'
             },
             {
                 id:3,
                 img: require('@/assets/4.jpg'),
                 titulo: 'fotal324',
                 preco: 505,
-                cor: 'red',
-                tipo: 'chair'
+                cor: 'vermelho',
+                tipo: 'cadeira'
             },
             {
                 id:4,
                 img: require('@/assets/5.jpg'),
                 titulo: 'sofa-1',
                 preco: 243,
-                cor: 'white',
+                cor: 'branco',
                 tipo: 'sofa'
             },
             {
@@ -53,16 +53,16 @@ export default new Vuex.Store({
                 img: require('@/assets/6.jpg'),
                 titulo: 'Fotal-2',
                 preco: 44,
-                cor: 'white',
-                tipo: 'chair'
+                cor: 'branco',
+                tipo: 'cadeira'
             },
             {
                 id:6,
                 img: require('@/assets/7.jpg'),
                 titulo: 'Fotal-34',
                 preco: 505,
-                cor: 'blue',
-                tipo: 'chair'
+                cor: 'azul',
+                tipo: 'cadeira'
             }
         ]
     }

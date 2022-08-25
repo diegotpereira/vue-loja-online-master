@@ -23,3 +23,6 @@ export default {
     props: ['CartaoArray']
 }
 </script>
+<style>
+
+</style>
