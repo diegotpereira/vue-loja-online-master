@@ -7,6 +7,7 @@ export default new Vuex.Store({
 
     state: {
 
+        infoPagina: [],
         carrinhoItens: [],
         itens: [
             {
@@ -110,7 +111,7 @@ export default new Vuex.Store({
                 img: require('@/assets/13.jpg'),
                 titulo: 'foto-4234',
                 preco: 756,
-                cor: 'blue',
+                cor: 'azul',
                 tipo: 'lamp'
             },
             {
@@ -137,6 +138,26 @@ export default new Vuex.Store({
         itensNumero(state) {
 
             return state.carrinhoItens.length
+        },
+        infoComprimento(state) {
+
+            if (state.infoPagina.length > 0) {
+                
+                // splice() altera o conteúdo de uma lista, 
+                // adicionando novos elementos enquanto remove elementos antigos.
+                return state.infoPagina.splice(0, 1)
+            }
+        }
+    },
+    mutations: {
+
+        noCarrinho(state, n) {
+
+            return state.carrinhoItens.push(n)
+        },
+        addNaInfo(state, n) {
+
+            return state.infoPagina.push(n)
         }
     }
 })
