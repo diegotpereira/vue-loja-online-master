@@ -23,10 +23,10 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Exo+2');
 
 #app {
+  background-color: #F8F8F8 !important;
   font-family: 'Exo 2', sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   
 }

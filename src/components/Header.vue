@@ -1,8 +1,8 @@
 <template>
     <div class="container-flex">
         <nav class="navbar navbar-light">
-            <div class="dropdown d-xl none d-lg-none mr-auto">
-                <img src="https://img.icons8.com/ios-glyphs/30/000000/menu--v1.png" alt="">
+            <div class="dropdown d-xl-none d-lg-none mr-auto">
+                <img src="https://img.icons8.com/ios-glyphs/30/000000/menu--v1.png" alt="" data-toggle="dropdown" data-target="#navd" aria-haspopup="true" aria-expanded="false">
                 <div class="dropdown-menu hb">
                     <router-link class="dropdown-item" to="/">Home</router-link>
                     <router-link class="dropdown-item" to="/produtos">Produtos</router-link>
@@ -136,7 +136,7 @@ z-index: 100;
 
 .buscar { 
     outline: none;
-    border: 1px F8F8F8;
+    border: 1px #F8F8F8;
     background: #ededed url('../assets/search.png') no-repeat 5px center;
     padding: 5px 8px 0px 26px;
     width: 10px;

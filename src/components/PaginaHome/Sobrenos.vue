@@ -37,7 +37,9 @@ export default {
 </script>
 <style scoped>
 .about-us img {
-  width: 90%;
-  min-width: 380px;
+  width: 50%;
+  min-width: 150px;
+  max-height: 150px;
+  height: 100%;
 }
 </style>
