@@ -19,7 +19,7 @@
             <span class="navbar-item bc d-none d-xl-block d-lg-block py-0">
                 <router-link class="pl-5" to="/">Home</router-link>
                 <router-link class="pl-5" to="/produtos">Produtos</router-link>
-                <router-link class="pl-5" to="/">Contatos</router-link>
+                <router-link class="pl-5" to="/contatos">Contatos</router-link>
             </span>
 
             <p class="navbar-item ml-auto">
@@ -27,40 +27,40 @@
                     <input type="search" class="buscar">
                 </div>
                 <div class="user">
-                    <h5>Registrar</h5>
+                    <h5 style="cursor: pointer" data-toggle="modal" data-target="#usuarioModal">Registrar</h5>
                 </div>
                 <div class="user">
-                    <h5>/</h5>
+                    <h5 style="cursor: pointer">/</h5>
                 </div>
                 <div class="user">
-                    <h5>Entrar</h5>
+                    <h5 style="cursor: pointer" data-toggle="modal" data-target="#usuarioModal">Entrar</h5>
                 </div>
             <div class="bag">
                 <img src="@/assets/cart.svg" alt="" class="pb-1">
-                <span class="mb-3"></span>
+                <span class="mb-3" v-if="this.contagemItensSacola > 0">{{ contagemItensSacola }}</span>
             </div>
         </nav>
 
         <!-- Usuario Modal -->
-        <div class="modal fade">
-            <div class="modal-dialog">
+        <div class="modal fade" id="usuarioModal" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-body">
-                        <button type="button" class="fechar">
-                            <span>X</span>
+                        <button type="button" class="fechar" data-dismiss="modal" style="outline-style: none;" aria-label="Close">
+                            <span>x</span>
                         </button>
                         <form action="" class="px-3 py-2">
                             <div class="form-group">
                                 <label for="">Email</label>
-                                <input type="email" name="" id="" class="form-control">
+                                <input type="email" name="" id="" class="form-control" placeholder="email@exemplo.com">
                             </div>
                              <div class="form-group">
                                 <label for="">Senha</label>
-                                <input type="email" name="" id="" class="form-control">
+                                <input type="email" name="" id="" class="form-control" placeholder="Senha">
                             </div>
                             <div class="form-check">
                                 <input type="checkbox" name="" id="" class="form-check-input">
-                                <label for="" class="form-check-label">
+                                <label for="dropdownCheck" class="form-check-label">
                                     Lembre de mim
                                 </label>
                             </div>
@@ -78,7 +78,13 @@
 </template>
 <script>
 export default {
-    name: 'HeaderPagina'
+    name: 'HeaderPagina',
+    computed: {
+        contagemItensSacola() {
+
+            return this.$store.getters.itensNumero
+        }
+    }
 }
 </script>
 

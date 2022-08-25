@@ -7,6 +7,7 @@ export default new Vuex.Store({
 
     state: {
 
+        carrinhoItens: [],
         itens: [
             {
                 id: 0,
@@ -63,7 +64,79 @@ export default new Vuex.Store({
                 preco: 505,
                 cor: 'azul',
                 tipo: 'cadeira'
+            },
+            {
+                id:7,
+                img: require('@/assets/8.jpg'),
+                titulo: 'foto-4364',
+                preco: 432,
+                cor: 'vermelho',
+                tipo: 'mesa'
+            },
+            {
+                id:8,
+                img: require('@/assets/9.jpg'),
+                titulo: 'foto-44',
+                preco: 390,
+                cor: 'branco',
+                tipo: 'mesa'
+            },
+            {
+                id:9,
+                img: require('@/assets/10.jpg'),
+                titulo: 'foto-34',
+                preco: 756,
+                cor: 'amarelo',
+                tipo: 'cadeira'
+            },
+            {
+                id:10,
+                img: require('@/assets/11.jpg'),
+                titulo: 'foto-23',
+                preco: 44,
+                cor: 'branco',
+                tipo: 'cadeira'
+            },
+            {
+                id:11,
+                img: require('@/assets/12.jpg'),
+                titulo: 'foto-4234',
+                preco: 156,
+                cor: 'vermelho',
+                tipo: 'lamp'
+            },
+            {
+                id:12,
+                img: require('@/assets/13.jpg'),
+                titulo: 'foto-4234',
+                preco: 756,
+                cor: 'blue',
+                tipo: 'lamp'
+            },
+            {
+                id:13,
+                img: require('@/assets/14.jpg'),
+                titulo: 'foto-4234',
+                preco: 756,
+                cor: 'branco',
+                tipo: 'cadeira'
+            },
+            {
+                id:14,
+                img: require('@/assets/table-1.jpg'),
+                titulo: 'table-32',
+                preco: 756,
+                cor: 'branco',
+                tipo: 'mesa'
             }
         ]
+    },
+
+    getters: {
+
+        itensNumero(state) {
+
+            return state.carrinhoItens.length
+        }
     }
 })

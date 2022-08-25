@@ -20,7 +20,7 @@
                             <span style="color:#f2be00;">Categorias</span>
                         </button>
                         <div class="dropdown-menu" aria-labelledby="MenuLink">
-                            <a class="dropdown-item" @click="classificarPorI('pranchas')">Tabelas</a>
+                            <a class="dropdown-item" @click="classificarPorI('mesa')">Tabelas</a>
                             <a class="dropdown-item" @click="classificarPorI('lamp')">Lâmpadas</a>
                             <a class="dropdown-item" @click="classificarPorI('cadeiras')">Cadeiras</a>
                             <a class="dropdown-item" @click="classificarPorI('sofa')">Sofás</a>
@@ -44,7 +44,7 @@
                             <div class="search-title">
                                 <h4>Categorias</h4>
                                 <br>
-                                <h6 @click="classificarPorI('pranchas')">Pranchas</h6>
+                                <h6 @click="classificarPorI('mesa')">Mesa</h6>
                                 <h6 @click="classificarPorI('lamp')">Lâmpadas</h6>
                                 <h6 @click="classificarPorI('cadeiras')">Cadeiras</h6>
                                 <h6 @click="classificarPorI('sofa')">Sofás</h6>
@@ -73,7 +73,7 @@
                     <Cartao :CartaoArray="cartoesFatiados"/>
 
                     <div class="col-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 py-5">
-                        <button type="button" @click="incNumeroCartao" class="btn btn-outline-secondary btn-lg btn-block">Mas +</button>
+                        <button type="button" @click="incNumeroCartao" class="btn btn-outline-secondary btn-lg btn-block">Mais +</button>
                     </div>
                 </div>
             </div>
